@@ -34,7 +34,9 @@ Developing a webpage with a shopping list. Users can addd items to the list, mar
 ### Running the webpage
 - Open the application with the live server on your browser.
 - Add items to the list by typing the item in the add item box.
-- Tick the box if the item has been picked/selected
+- Tick the box if the item has been picked/selected.
+- You can view the webpage using the below deployed link
+`https://ianmwangi2.github.io/code-challenge-2/`
 
 ## Author
 This project was written by:
