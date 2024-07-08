@@ -1,14 +1,20 @@
-const itemInput = document.getElementById('item-input');
-const addBtn = document.getElementById('add-btn');
-const clearBtn = document.getElementById('clear-btn');
-const listContainer = document.getElementById('list-container');
-let shoppingList = [];
+//input field for adding new items
+const itemInput = document.getElementById('item-input'); 
+// Button for adding new items 
+const addBtn = document.getElementById('add-btn');  
+//Button for clearing new items
+const clearBtn = document.getElementById('clear-btn');  
+//container for the list items
+const listContainer = document.getElementById('list-container'); 
+//initializes an empty array
+let shoppingList = [];  
 
 if (localStorage.getItem('shoppingList')) {
     shoppingList = JSON.parse(localStorage.getItem('shoppingList'));
-    renderList();
+    renderList(); 
 }
 
+// Seting up a click event listener on the add button
 addBtn.addEventListener('click', () => {
     const newItem = itemInput.value.trim();
     if (newItem) {
@@ -18,12 +24,13 @@ addBtn.addEventListener('click', () => {
     }
 });
 
-
+// Seting up a click event on the clear button
 clearBtn.addEventListener('click', () => {
     shoppingList = [];
     renderList();
 });
 
+// Updating the HTML display
 function renderList() {
     listContainer.innerHTML = '';
     shoppingList.forEach((item, index) => {
